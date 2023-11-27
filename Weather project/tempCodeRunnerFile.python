@@ -1,0 +1,9 @@
+
+with open('output.txt', 'r') as f:
+    lines = f.readlines()
+
+with open('output_preprocessed.txt', 'w') as f:
+    for line in lines:
+        if '99999' in line or '+99999' in line:
+            continue
+        f.write(line)
